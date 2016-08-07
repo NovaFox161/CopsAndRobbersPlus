@@ -122,7 +122,7 @@ public class Main extends JavaPlugin {
                     if (getConfig().getString("Console.Verbose").equalsIgnoreCase("True")) {
                         getLogger().info("Checking Dev Bukkit for updates...");
                     }
-                    updateChecker = new UpdateChecker(Main.plugin, "http://dev.bukkit.org/bukkit-plugins/copsandrobbersplus/files.rss");
+                    updateChecker = new UpdateChecker(Main.plugin, "https://dev.bukkit.org/bukkit-plugins/copsandrobbersplus/files.rss");
                     if (updateChecker.UpdateNeeded()) {
                         getLogger().info("A new update for CopsAndRobbersPlus is available! Version: " + updateChecker.getVersion());
                         getLogger().info("Download now at: " + updateChecker.getLink());

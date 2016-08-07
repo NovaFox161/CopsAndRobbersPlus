@@ -25,7 +25,7 @@ public class JoinListener implements Listener {
         if (plugin.getConfig().getString("Check for Updates").equalsIgnoreCase("True")) {
             Player player = event.getPlayer();
             if (player.hasPermission("CARP.notify.update")) {
-                plugin.updateChecker = new UpdateChecker(plugin, "http://dev.bukkit.org/bukkit-plugins/copsandrobbersplus/files.rss");
+                plugin.updateChecker = new UpdateChecker(plugin, "https://dev.bukkit.org/bukkit-plugins/copsandrobbersplus/files.rss");
                 if (plugin.updateChecker.UpdateNeeded()) {
                     player.sendMessage("&6A new update for CopsAndRobbersPlus is available! &2Version: " + plugin.updateChecker.getVersion());
                     player.sendMessage("&6Download now at: &2" + plugin.updateChecker.getLink());

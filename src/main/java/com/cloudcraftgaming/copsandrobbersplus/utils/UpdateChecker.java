@@ -44,8 +44,7 @@ public class UpdateChecker {
             }
         }
         catch (Exception e) {
-            plugin.getLogger().info("Could not check for updates! URL is not correct! Report this to Shades161 on dev bukkit!");
-            e.printStackTrace();
+            plugin.getLogger().severe("Could not check for updates! URL is incorrect! Report this to Shades161 on her dev bukkit!");
         }
         return false;
     }
