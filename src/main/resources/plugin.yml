@@ -1,0 +1,40 @@
+name: CopsAndRobbersPlus
+version: 1.0.2
+description: Brings 'Cops and Robbers' into Minecreaft as a minigame
+author: Shades161
+website: http://dev.bukkit.org/bukkit-plugins/cops-and-robbers-plus
+
+load: POSTWORLD
+softdepend: [PerWorldChatPlus]
+
+main: com.cloudcraftgaming.copsandrobbersplus.Main
+
+commands:
+  copsandrobbers:
+    description: Base command for CopsAndRobbersPlus.
+    permission: CARP.use.command
+  car:
+    description: Base command for CopsAndRobbersPlus.
+    permission: CARP.use.command
+  carp:
+    description: Base command for CopsAndRobbersPlus.
+    permission: CARP.use.command
+
+permissions:
+  CARP.notify.update:
+    description: Allows the player to be notified of an update.
+    default: op
+  CARP.use.command:
+    description: Allows use of the base command.
+    default: true
+  CARP.use.command.set:
+    description: Allows use of the set commands and its functions.
+    default: op
+  CARP.use.command.admin:
+    description: Allows use of the admin commands and its functions/
+  CARP.sign.place:
+    description: Allows placing of CopsAndRobbersPlus signs.
+    default: op
+  CARP.sign.use:
+    description: Allows use of CopsAndRobbersPlus signs.
+    default: true
