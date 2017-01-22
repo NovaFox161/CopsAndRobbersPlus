@@ -13,7 +13,7 @@ import java.util.List;
  * For Project: CopsAndRobbersPlus.
  */
 public class FileManager {
-    static Double configVersion = 1.0;
+    private static Double configVersion = 1.0;
 
     public static void createConfig() {
         File file = new File(Main.plugin.getDataFolder() + "/config.yml");
@@ -23,6 +23,7 @@ public class FileManager {
             Main.plugin.getConfig().addDefault("DO NOT DELETE", "CopsAndRobbersPlus is developed and managed by Shades161");
             Main.plugin.getConfig().addDefault("Config Version", configVersion);
             Main.plugin.getConfig().addDefault("Check for Updates", true);
+            Main.plugin.getConfig().addDefault("Download Updates", false);
             Main.plugin.getConfig().addDefault("Language", "English");
 
             Main.plugin.getConfig().addDefault("Console.Verbose", true);

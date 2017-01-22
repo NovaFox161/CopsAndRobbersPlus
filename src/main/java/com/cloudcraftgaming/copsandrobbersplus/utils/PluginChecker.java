@@ -11,8 +11,7 @@ public class PluginChecker {
     public static void checkForPerWorldChatPlus() {
         if (Main.plugin.getConfig().getString("Chat.PerWorldChatPlus.CompatibilityMode").equalsIgnoreCase("True")) {
             if (Main.plugin.getServer().getPluginManager().getPlugin("PerWorldChatPlus") != null) {
-                if (Main.plugin.getServer().getPluginManager().getPlugin("PerWorldChatPlus").getDescription().getVersion().equals("5.0.0")
-                        || Main.plugin.getServer().getPluginManager().getPlugin("PerWorldChatPlus").getDescription().getVersion().equals("5.0.1")) {
+                if (Main.plugin.getServer().getPluginManager().getPlugin("PerWorldChatPlus").getDescription().getVersion().startsWith("5.")) {
                     Main.plugin.perWorldChatPlus = Main.plugin.getServer().getPluginManager().getPlugin("PerWorldChatPlus");
                     if (Main.plugin.getConfig().getString("Console.Verbose").equalsIgnoreCase("True")) {
                         Main.plugin.getLogger().info("PerWorldChatPlus detected! Will use compatibility mode for chat!");

@@ -21,7 +21,6 @@ import java.io.IOException;
  */
 public class Main extends JavaPlugin {
     public static Main plugin;
-    public UpdateChecker updateChecker;
     public Plugin perWorldChatPlus;
 
     public void onDisable() {
@@ -118,20 +117,7 @@ public class Main extends JavaPlugin {
         Bukkit.getScheduler().scheduleSyncDelayedTask(plugin, new Runnable() {
             @Override
             public void run() {
-                if (getConfig().getString("Check for Updates").equalsIgnoreCase("True")) {
-                    if (getConfig().getString("Console.Verbose").equalsIgnoreCase("True")) {
-                        getLogger().info("Checking Dev Bukkit for updates...");
-                    }
-                    updateChecker = new UpdateChecker(Main.plugin, "https://dev.bukkit.org/bukkit-plugins/copsandrobbersplus/files.rss");
-                    if (updateChecker.UpdateNeeded()) {
-                        getLogger().info("A new update for CopsAndRobbersPlus is available! Version: " + updateChecker.getVersion());
-                        getLogger().info("Download now at: " + updateChecker.getLink());
-                    } else {
-                        if (getConfig().getString("Console.Verbose").equalsIgnoreCase("True")) {
-                            getLogger().info("No updates found on Dev Bukkit! You have the most recent version!");
-                        }
-                    }
-                }
+                UpdateChecker.checkForUpdates();
             }
         }, 20L);
     }
