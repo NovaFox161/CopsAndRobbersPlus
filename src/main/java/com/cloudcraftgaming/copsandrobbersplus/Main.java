@@ -5,7 +5,10 @@ import com.cloudcraftgaming.copsandrobbersplus.arena.ArenaManager;
 import com.cloudcraftgaming.copsandrobbersplus.arena.GameManager;
 import com.cloudcraftgaming.copsandrobbersplus.commands.BaseCommand;
 import com.cloudcraftgaming.copsandrobbersplus.listeners.*;
-import com.cloudcraftgaming.copsandrobbersplus.utils.*;
+import com.cloudcraftgaming.copsandrobbersplus.utils.FileManager;
+import com.cloudcraftgaming.copsandrobbersplus.utils.GameState;
+import com.cloudcraftgaming.copsandrobbersplus.utils.MessageManager;
+import com.cloudcraftgaming.copsandrobbersplus.utils.PluginChecker;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.Plugin;
@@ -117,7 +120,7 @@ public class Main extends JavaPlugin {
         Bukkit.getScheduler().scheduleSyncDelayedTask(plugin, new Runnable() {
             @Override
             public void run() {
-                UpdateChecker.checkForUpdates();
+                //TODO: Use my custom update API
             }
         }, 20L);
     }

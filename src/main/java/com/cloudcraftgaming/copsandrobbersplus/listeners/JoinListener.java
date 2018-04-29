@@ -2,7 +2,6 @@ package com.cloudcraftgaming.copsandrobbersplus.listeners;
 
 import com.cloudcraftgaming.copsandrobbersplus.Main;
 import com.cloudcraftgaming.copsandrobbersplus.utils.FileManager;
-import com.cloudcraftgaming.copsandrobbersplus.utils.UpdateChecker;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -25,7 +24,7 @@ public class JoinListener implements Listener {
         if (plugin.getConfig().getString("Check for Updates").equalsIgnoreCase("True")) {
             Player player = event.getPlayer();
             if (player.hasPermission("CARP.notify.update")) {
-                UpdateChecker.checkForUpdates(player);
+                //TODO: Use my custom update API
             }
         }
     }
